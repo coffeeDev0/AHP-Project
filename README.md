@@ -8,10 +8,9 @@ Application web implémentant le **processus de hiérarchie analytique (AHP)** s
 
 ## Stack technique
 
-- **Next.js 15** (App Router) — frontend + API dans un seul projet
+- **Next.js 15** (App Router) — frontend + API
 - **TypeScript** — typage de bout en bout
 - **CSS pur** — sans bibliothèque d’interface externe
-- Aucune base de données nécessaire — calcul sans état
 
 ---
 
@@ -22,7 +21,7 @@ L’application vous guide en 4 étapes :
 ### Étape 1 — Objectif & critères
 
 - Saisissez votre objectif de décision (par ex. « Choisir le meilleur ordinateur portable »)
-- Ajoutez au moins 2 critères (par ex. Prix, Performance, Autonomie)
+- Ajoutez au moins 3 critères (par ex. Prix, Performance, Autonomie)
 
 ### Étape 2 — Alternatives & scores
 
@@ -74,74 +73,6 @@ L’application vous guide en 4 étapes :
 
 ---
 
-## API
-
-Le backend expose un seul point d’accès : `/api/ahp`
-
-### `GET /api/ahp`
-
-Retourne les métadonnées de l’échelle de Saaty.
-
-### `POST /api/ahp`
-
-**Corps de la requête :**
-
-```json
-{
-  "goal": "Choisir le meilleur ordinateur portable",
-  "criteria": ["Prix", "Performance", "Autonomie"],
-  "alternatives": [
-    {
-      "name": "MacBook Pro",
-      "scores": { "Prix": 2000, "Performance": 9, "Autonomie": 8 }
-    },
-    {
-      "name": "Dell XPS 15",
-      "scores": { "Prix": 1500, "Performance": 7, "Autonomie": 6 }
-    },
-    {
-      "name": "ThinkPad",
-      "scores": { "Prix": 1200, "Performance": 6, "Autonomie": 9 }
-    }
-  ],
-  "pairwiseMatrix": [
-    [1, 3, 5],
-    [0.333, 1, 3],
-    [0.2, 0.333, 1]
-  ]
-}
-```
-
-**Réponse (cohérente) :**
-
-```json
-{
-  "success": true,
-  "goal": "Choisir le meilleur ordinateur portable",
-  "bestAlternative": "MacBook Pro",
-  "criteriaWeights": { "Prix": 0.637, "Performance": 0.258, "Autonomie": 0.105 },
-  "consistency": { "lambdaMax": 3.0385, "ci": 0.0193, "ri": 0.58, "cr": 0.0332, "isConsistent": true },
-  "ranking": [
-    { "name": "MacBook Pro", "score": 0.4521, "rank": 1, "normalizedScores": {...} },
-    ...
-  ]
-}
-```
-
-**Réponse (incohérente) :**
-
-```json
-{
-  "success": false,
-  "errorType": "inconsistent_matrix",
-  "message": "Votre matrice de comparaison par paires est incohérente (CR = 0.2341 > 0,10)...",
-  "consistency": { "cr": 0.2341, "isConsistent": false, ... },
-  "criteriaWeights": { ... }
-}
-```
-
----
-
 ## Auteur
 
-LEUDJEU WOUAPPI Beautrel Horssel — Université de Yaoundé 1 — avril 2026
+LEUDJEU WOUAPPI Beautrel Horssel — Université de Yaoundé 1 — Mai 2026

@@ -1,6 +1,6 @@
 {
   "name": "ahp-project",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Analytical Hierarchy Process — multi-criteria decision making based on Saaty's method",
   "main": "index.js",
   "private": true,
@@ -11,9 +11,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.1.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next": "15.1.11",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1"
   },
   "devDependencies": {
     "@types/node": "^22",

@@ -28,7 +28,7 @@ export default function RootLayout({
         <main className="container">{children}</main>
         <footer className="site-footer">
           <div className="container">
-            <p>Outil AHP · Université de Yaoundé 1 · 2025</p>
+            <p>Outil AHP · 2026</p>
           </div>
         </footer>
       </body>

@@ -4,7 +4,7 @@ Application web implémentant le **processus de hiérarchie analytique (AHP)** s
 
 ## Adresse de l’application en ligne
 
-- URL de l’application : https://votre-app-ahp-en-ligne.example.com
+- URL de l’application : https://ahp-decision-tool-bay.vercel.app/
 
 ## Stack technique
 

@@ -1,0 +1,27 @@
+{
+  "name": "ahp-project",
+  "version": "1.0.0",
+  "description": "Analytical Hierarchy Process — multi-criteria decision making based on Saaty's method",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  },
+  "keywords": [],
+  "author": "LEUDJEU WOUAPPI Beautrel Horssel",
+  "license": "ISC"
+}

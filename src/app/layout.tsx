@@ -28,7 +28,7 @@ export default function RootLayout({
         <main className="container">{children}</main>
         <footer className="site-footer">
           <div className="container">
-            <p>Outil AHP · 2026</p>
+            <p>Outil AHP · {new Date().getFullYear()}</p>
           </div>
         </footer>
       </body>

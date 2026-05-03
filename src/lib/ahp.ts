@@ -107,10 +107,10 @@ export function validateMatrix(matrix: number[][]): {
 } {
   const n = matrix.length;
 
-  if (n < 2)
+  if (n < 3)
     return {
       valid: false,
-      message: "La matrice doit comporter au moins 2 critères.",
+      message: "La matrice doit comporter au moins 3 critères.",
     };
 
   for (let i = 0; i < n; i++) {

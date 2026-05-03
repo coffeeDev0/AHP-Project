@@ -36,7 +36,7 @@ export default function StepCriteria({ state, setState, onNext }: Props) {
     }
   };
 
-  const canProceed = state.goal.trim().length > 0 && state.criteria.length >= 2;
+  const canProceed = state.goal.trim().length > 0 && state.criteria.length >= 3;
 
   return (
     <div className="card">
@@ -84,7 +84,7 @@ export default function StepCriteria({ state, setState, onNext }: Props) {
           </button>
         </div>
         <p className="hint">
-          Appuyez sur Entrée ou cliquez sur Ajouter. Il faut au minimum 2
+          Appuyez sur Entrée ou cliquez sur Ajouter. Il faut au minimum 3
           critères.
         </p>
 
